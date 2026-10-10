@@ -194,6 +194,26 @@ func (a *App) directAddresses() []string {
 	return out
 }
 
+// relayToken is this computer's current token for Toskar's relay, from a
+// subscription or a grant, for its paired devices (#456). "" when it uses
+// its organization's relay, which gives each device its own way in, or
+// has no token, or one that has run out.
+func (a *App) relayToken() string {
+	cfg := a.Config.Get()
+	if cfg.RemoteAccess.Relay != "" {
+		return ""
+	}
+	tok, err := auth.NewSecretStore(cfg.DataDir).Read(relayclient.TokenName)
+	if err != nil {
+		return ""
+	}
+	tok = strings.TrimSpace(tok)
+	if _, exp, ok := relayclient.ParseToken(tok); !ok || !time.Now().Before(exp) {
+		return ""
+	}
+	return tok
+}
+
 // setRelayToken keeps the route token the app got for this computer from a
 // store subscription (#456), for Toskar's relay, and starts using it; with
 // enable it turns access from anywhere on too (the caller is an Admin).
