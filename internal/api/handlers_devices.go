@@ -153,6 +153,7 @@ func (s *Server) handlePairDevice(w http.ResponseWriter, r *http.Request) {
 			if s.deps.RelayName != nil {
 				out["relay"] = s.deps.RelayName()
 			}
+			s.addRelayToken(out)
 		}
 	}
 	writeJSON(w, http.StatusCreated, out)

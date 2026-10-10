@@ -350,5 +350,19 @@ func (s *Server) handleRouteSecret(w http.ResponseWriter, r *http.Request) {
 	if s.deps.RelayName != nil {
 		out["relay"] = s.deps.RelayName()
 	}
+	s.addRelayToken(out)
 	writeJSON(w, http.StatusOK, out)
+}
+
+// addRelayToken puts this computer's token for Toskar's relay in a route
+// answer, which only paired devices on the home network get, so every one
+// of them can look the computer up away from home, not only the one that
+// subscribed (#456). A computer without one answers without it.
+func (s *Server) addRelayToken(out map[string]any) {
+	if s.deps.RelayToken == nil {
+		return
+	}
+	if tok := s.deps.RelayToken(); tok != "" {
+		out["token"] = tok
+	}
 }

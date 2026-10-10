@@ -218,12 +218,19 @@ func TestSetRelayToken(t *testing.T) {
 			t.Errorf("%s: %v", name, err)
 		}
 	}
+	if got := a.relayToken(); got != "" {
+		t.Fatalf("a token before any was given: %q", got)
+	}
 	good := mint(route, time.Now().Add(30*24*time.Hour))
 	if state, err := a.setRelayToken(ctx, good, false); err != nil || state != "off" {
 		t.Fatalf("kept while off: %q %v", state, err)
 	}
 	if kept, _ := secrets.Read(relayclient.TokenName); kept != good {
 		t.Fatal("token not kept")
+	}
+	// Paired devices get it at home (#456).
+	if got := a.relayToken(); got != good {
+		t.Fatalf("devices get %q", got)
 	}
 	if _, err := a.setRelayToken(ctx, good, true); err != nil || !a.Config.Get().RemoteAccess.Enabled {
 		t.Fatalf("enable: %v", err)
@@ -233,5 +240,9 @@ func TestSetRelayToken(t *testing.T) {
 	}
 	if _, err := a.setRelayToken(ctx, good, false); !errors.Is(err, errRelayTokenOwn) {
 		t.Fatalf("with the organization's relay: %v", err)
+	}
+	// An organization's relay gives each device its own way in.
+	if got := a.relayToken(); got != "" {
+		t.Fatalf("with the organization's relay, devices get %q", got)
 	}
 }
