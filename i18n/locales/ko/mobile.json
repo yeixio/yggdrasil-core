@@ -514,7 +514,13 @@
     "failed": "완료하지 못했어요: {{detail}}",
     "renews": "계정의 구독 설정에서 취소할 때까지 자동으로 갱신돼요.",
     "terms": "약관",
-    "privacy": "개인정보"
+    "privacy": "개인정보",
+    "statusActive": "활성",
+    "statusNearCap": "이번 달 한도에 가까움",
+    "statusPaused": "다음 달까지 일시 중지됨",
+    "statusInactive": "비활성",
+    "inactiveBody": "구독이 끝났거나 갱신되지 않았습니다. 외출 중에도 컴퓨터에 연결하려면 다시 구독하세요.",
+    "manage": "구독 관리"
   },
   "deliberation": {
     "summary": {

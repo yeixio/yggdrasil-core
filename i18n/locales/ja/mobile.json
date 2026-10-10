@@ -514,7 +514,13 @@
     "failed": "完了できませんでした：{{detail}}",
     "renews": "アカウントのサブスクリプション設定で解約するまで自動的に更新されます。",
     "terms": "利用規約",
-    "privacy": "プライバシー"
+    "privacy": "プライバシー",
+    "statusActive": "有効",
+    "statusNearCap": "今月の上限に近づいています",
+    "statusPaused": "来月まで一時停止中",
+    "statusInactive": "無効",
+    "inactiveBody": "サブスクリプションが終了したか、更新されませんでした。外出先からコンピュータにアクセスするには、もう一度登録してください。",
+    "manage": "サブスクリプションを管理"
   },
   "deliberation": {
     "summary": {

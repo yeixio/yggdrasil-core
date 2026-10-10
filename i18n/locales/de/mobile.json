@@ -521,7 +521,13 @@
     "failed": "Konnte nicht abgeschlossen werden: {{detail}}",
     "renews": "Verlängert sich automatisch, bis du es in den Abo-Einstellungen deines Kontos kündigst.",
     "terms": "Bedingungen",
-    "privacy": "Datenschutz"
+    "privacy": "Datenschutz",
+    "statusActive": "Aktiv",
+    "statusNearCap": "Fast am Monatslimit",
+    "statusPaused": "Pausiert bis nächsten Monat",
+    "statusInactive": "Nicht aktiv",
+    "inactiveBody": "Dein Abo ist abgelaufen oder wurde nicht verlängert. Schließe es erneut ab, um deinen Computer unterwegs zu erreichen.",
+    "manage": "Abo verwalten"
   },
   "deliberation": {
     "summary": {

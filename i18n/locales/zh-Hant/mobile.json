@@ -514,7 +514,13 @@
     "failed": "無法完成：{{detail}}",
     "renews": "會自動續訂，直到你在帳戶的訂閱設定中取消。",
     "terms": "條款",
-    "privacy": "隱私"
+    "privacy": "隱私",
+    "statusActive": "已啟用",
+    "statusNearCap": "接近本月上限",
+    "statusPaused": "暫停至下個月",
+    "statusInactive": "未啟用",
+    "inactiveBody": "你的訂閱已結束或未續訂。重新訂閱，即可在外出時存取你的電腦。",
+    "manage": "管理訂閱"
   },
   "deliberation": {
     "summary": {

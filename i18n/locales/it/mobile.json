@@ -528,7 +528,13 @@
     "failed": "Impossibile completare: {{detail}}",
     "renews": "Si rinnova automaticamente finché non lo annulli nelle impostazioni degli abbonamenti del tuo account.",
     "terms": "Termini",
-    "privacy": "Privacy"
+    "privacy": "Privacy",
+    "statusActive": "Attivo",
+    "statusNearCap": "Vicino al limite del mese",
+    "statusPaused": "In pausa fino al mese prossimo",
+    "statusInactive": "Non attivo",
+    "inactiveBody": "L'abbonamento è terminato o non è stato rinnovato. Abbonati di nuovo per raggiungere il tuo computer fuori casa.",
+    "manage": "Gestisci abbonamento"
   },
   "deliberation": {
     "summary": {

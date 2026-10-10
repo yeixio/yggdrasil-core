@@ -597,7 +597,13 @@
     "failed": "Couldn't finish: {{detail}}",
     "renews": "Renews automatically until you cancel it in your account's subscription settings.",
     "terms": "Terms",
-    "privacy": "Privacy"
+    "privacy": "Privacy",
+    "statusActive": "Active",
+    "statusNearCap": "Close to this month's limit",
+    "statusPaused": "Paused until next month",
+    "statusInactive": "Not active",
+    "inactiveBody": "Your subscription ended or didn't renew. Subscribe again to reach your computer away from home.",
+    "manage": "Manage subscription"
   },
   "deliberation": {
     "summary": {

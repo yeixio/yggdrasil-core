@@ -528,7 +528,13 @@
     "failed": "No se pudo terminar: {{detail}}",
     "renews": "Se renueva automáticamente hasta que la canceles en los ajustes de suscripciones de tu cuenta.",
     "terms": "Términos",
-    "privacy": "Privacidad"
+    "privacy": "Privacidad",
+    "statusActive": "Activa",
+    "statusNearCap": "Cerca del límite de este mes",
+    "statusPaused": "En pausa hasta el próximo mes",
+    "statusInactive": "No activa",
+    "inactiveBody": "Tu suscripción terminó o no se renovó. Suscríbete de nuevo para llegar a tu computadora fuera de casa.",
+    "manage": "Administrar suscripción"
   },
   "deliberation": {
     "summary": {
