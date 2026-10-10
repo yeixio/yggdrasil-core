@@ -8,6 +8,46 @@ The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Thi
 
 Changes waiting for the next release are in [changes/unreleased/](changes/unreleased/), one file per pull request. `scripts/changelog.py preview` shows them together, and `scripts/changelog.py release <version>` writes them here when the release is cut.
 
+## [1.8.1] - 2026-10-10
+
+### Added
+
+- Word documents (.docx) and PowerPoint decks (.pptx) can be attached to a
+  chat and connected as knowledge: their text is read, a deck slide by
+  slide. Toskar already made Word documents it couldn't read back.
+- A scanned PDF can be attached to a chat: its pages are read with text
+  recognition, which starts as you attach it, so the question finds the
+  text. Before, it could only be connected as knowledge.
+
+### Fixed
+
+- Asking for a file by its name, such as "save it as hours.html" or "write
+  a script saved as convert.py", makes the file, for web pages, JSON, and
+  code as well as documents and spreadsheets.
+- When you decline a command Toskar asked to run, the answer says it wasn't
+  done, instead of handing you the command to run yourself.
+- Gemma 2 9B, Qwen 2.5 14B, and Qwen 2.5 32B now run a profile's topic
+  checks when they're installed, as Gemma 3 4B does: they passed the topic
+  quality set, and smaller models wrongly refused real questions.
+- Toskar recognizes Spanish more reliably, so an answer or a topic refusal
+  is in the person's language instead of being mistaken for Portuguese.
+- A profile kept to one subject takes a second look before refusing a
+  message, so a question about caring for or using what it covers, such as
+  tire pressure for a tire shop, is answered on small models too. The check
+  of the answer reads the question without its "search the web" wording.
+- A recording attached to a message is transcribed before the answer is
+  written, so "what does this say?" gets the words instead of an empty
+  reply. A reply that's only a tool call that can't run is asked for again
+  in plain text, never shown empty.
+- The quality set's stand-in picture is a whole PNG, and its stand-in clip
+  is a WebM, as the real video tool makes.
+- PDFs Toskar makes show text in any of its languages, not only Western
+  European ones: accents, Greek, Cyrillic, and Vietnamese, with Chinese,
+  Japanese, and Korean fonts downloaded the first time a PDF needs one.
+- Every device connected to a computer can reach it away from home through
+  Toskar's relay, not only the one that bought the subscription: devices
+  get the computer's relay token on the home network.
+
 ## [1.8.0] - 2026-10-10
 
 Toskar 1.8 opens your AI to more places. Chat portals put an assistant on its own page or on your website, with its own profile, look, limits, and visitors, and topic controls keep an assistant on its subject, checked before and after each answer. Access from anywhere lets your devices reach your computer away from home, through your router or a relay. The Toskar app on your phone gets your computer's notifications and automations, its memories, personalization, and privacy records, and a share sheet that saves pages and files to Knowledge. Chats keep versions when you try again or edit, several chats can be deleted at once, models can be added from any GGUF file, and the computer starts loading a model as soon as a device starts asking. The API stays compatible: the client contract is 1.26, whose new versions only add fields. Binaries and the apt repository are not signed.
