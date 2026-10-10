@@ -528,7 +528,13 @@
     "failed": "Impossible de terminer : {{detail}}",
     "renews": "Se renouvelle automatiquement jusqu'à ce que vous le résiliiez dans les réglages d'abonnement de votre compte.",
     "terms": "Conditions",
-    "privacy": "Confidentialité"
+    "privacy": "Confidentialité",
+    "statusActive": "Actif",
+    "statusNearCap": "Proche de la limite du mois",
+    "statusPaused": "En pause jusqu’au mois prochain",
+    "statusInactive": "Inactif",
+    "inactiveBody": "Votre abonnement a pris fin ou n’a pas été renouvelé. Abonnez-vous à nouveau pour joindre votre ordinateur hors de chez vous.",
+    "manage": "Gérer l’abonnement"
   },
   "deliberation": {
     "summary": {

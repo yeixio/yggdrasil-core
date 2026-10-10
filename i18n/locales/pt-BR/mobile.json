@@ -528,7 +528,13 @@
     "failed": "Não foi possível concluir: {{detail}}",
     "renews": "Renova automaticamente até você cancelar nas configurações de assinaturas da sua conta.",
     "terms": "Termos",
-    "privacy": "Privacidade"
+    "privacy": "Privacidade",
+    "statusActive": "Ativa",
+    "statusNearCap": "Perto do limite deste mês",
+    "statusPaused": "Pausada até o próximo mês",
+    "statusInactive": "Inativa",
+    "inactiveBody": "Sua assinatura terminou ou não foi renovada. Assine de novo para acessar seu computador fora de casa.",
+    "manage": "Gerenciar assinatura"
   },
   "deliberation": {
     "summary": {
